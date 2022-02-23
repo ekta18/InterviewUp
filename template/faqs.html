@@ -1,0 +1,371 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FAQs</title>
+
+	<!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Concert+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}'" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+	  <!---CSS File -->
+  <link href="{% static 'css/faqs.css' %}" rel="stylesheet">
+
+</head>
+<body>
+	
+   <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a><a href="index.html">  InterviewUp</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+           <li><a class="nav-link scrollto" href="..">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features">Features</a></li>
+          <li><a class="nav-link scrollto active" href="../faqs">FAQs</a></li>
+          <li><a class="nav-link scrollto" href="..">News</a></li>
+          <li><a class="nav-link scrollto" href="../overview">Overview</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+
+          <h2>Frequently Asked Questions</h2>
+          <p>Get answers for commonly asked questions on interview and resume!!</p>
+        </div>
+
+        <div class="accordion-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">What are the most important things to remember in the interview?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <p>
+                  The interviewer will probably decide very quickly — as quickly as the first five minutes — if you are a good fit for the job, so the first impression you make is critical. Establishing chemistry and rapport with the interviewer is a big step toward making that strong first impression. Maintain rapport, energy, and enthusiasm throughout the interview. Respond to questions fully but concisely. 
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">How should I be dressed for the interview?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  <b>For Men :</b>
+                  <br>Men can wear plain light coloured formal shirt and tie. Trouser should be plain and of dark shade. In winters, wear a conservative suit or blazer of solid (e.g. black/navy) colour. 
+                  The tie should be simple, conservative and not too flashy. It should match the colour of shirt or the suit.  
+                  Shirt should be tucked-in and shoes should be well polished.
+                  Hair should be neat and clean.
+                  Avoid jeans and T-shirts.
+                  <br>
+                  <b>For Women: </b>
+                  <br>  If you go for Indian formals, use plain cotton salwar kameez with plain dupatta. Avoid low-cut necklines. Prefer light pastel shades. Don’t use very colourful clothes.
+                  When choosing western formals, use plain light coloured blouse with formal trouser or skirt of conservative length, up to the knee. Prefer dark shades for the trouser. In winters, a blazer or conservative suit can ne used.
+                  Avoid too much make-up and use simple jewellery."
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">Should I bluff if I don't know the answer?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Honesty is the best policy! You should never lie in an interview, however if you are unsure about an answer you can admit that you don't know about that topic and proceed further with an attempt to the question. You should project how you are keen to know more about this topic and will do your homework soon! 
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-4" class="collapsed">Things to Keep in Mind When Answering Tricky/Tough Interview Questions?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-4" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  "Interviewers love to ask tough questions that you’re not expecting. However, if you stay calm and composed and use the steps above, you’ll give great answers and get more job offers.
+
+                  <br><br><b>Here are 3 things to keep in mind that should help you further:</b><br>
+                  1. First, the interviewer is not out to get you. They want you to give good answers. They’re looking for someone they feel comfortable hiring! And they’d rather find that person sooner than later.
+                  <br>
+                  2. Next, it’s okay to say, “Hm, that’s a tough question, let me think for a minute.” No interviewer will fault you for doing this once or twice in an interview.
+
+                  So don’t just blurt out an answer and rush yourself if you hear a tricky interview question that caught you completely off-guard. Take a deep breath and think it through.
+                  <br>
+                  3. And finally, for many of these questions, the interviewer just wants to hear your thought process.
+                  <br><br>
+                  So this is why you should never panic and never be afraid to say, “let me think for a second”  when you’re asked a tricky interview question that you’re not sure how to answer. 
+                  If you take your time and remember that sometimes employers just want to hear how you think, you’ll ace the interview and survive any tough, unexpected questions they ask. "
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">Whom and How should you greet someone in an Interview?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  "When you arrive at a job interview, introduce yourself to the receptionist, if there is one. Let them know who you are and who you are scheduled to meet with.
+                  <br>
+                  Greet your interviewer with a firm handshake and introduce yourself. Be prepared for a little small talk, but don't overdo it. Follow the interviewer's lead and let them guide the direction of the conversation."
+                </p>
+              </div>
+            </li>
+
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-6" class="collapsed">What should be your body language during an interview?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-6" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  One of the most off-putting interview blunders is bad body language.
+
+                  Your interviewer doesn’t really have that much to go on when they make their final decision. Chances are that they’ll only get to meet you once or twice before hiring and that means that during the interview they’ll be scrutinising your every move.
+
+                  <br><br><b>Recruiter Pro Tips</b>
+                  <br>
+                  Do sit up straight and look genuinely interested. <br>
+                  Do keep good eye contact. <br>
+                  Don’t slouch. <br>
+                  Don’t lean forward, towards the interviewer. <br>
+                  Don’t point. <br>
+                  Don’t cross your arms. <br>
+                  Don’t stare for too long. <br>
+                  Don’t fidget. <br>
+                  Don’t keep looking around the room. <br>
+                  Your body language will betray some of your feelings in the interview, so if you can take control of your body, it could go a long way towards smashing the interview. <br>
+                  <br>
+                  We actually recently wrote up a piece for interviewers highlighting 8 ways to spot a liar in an interview – it’s worth having a look, so you know not to exhibit these behaviours yourself!" 
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up">
+                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-7" class="collapsed">Should you ask the employer about the salary?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-7" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  No! Salary should not be asked in an interview. It can be discussed later once you are selected.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-8" class="collapsed">Few Do's and Dont's in an interview.<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-8" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  <b>Do</b> <br> 
+                  Smile as frequently as possible—especially when you are asked a question—but don’t overdo it. <br>
+                  Maintain good eye contact. <br>
+                  If there is more than one interviewer, look from person to person. <br>
+                  Be articulate. <br>
+                  Listen carefully to each question and think for a moment before giving your answer. <br>
+
+                  <b>Don't</b> <br>
+                  Cross your arms—it makes you look defensive. <br>
+                  Sit on the edge of your seat. <br>
+                  Touch your face, or play with your jewelry or hair. <br>
+                  Rock on your seat. <br>
+                  Interrupt when being asked a question. <br>
+                  Give one-word answers, unless the question dictates a one-word answer. <br>
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-9" class="collapsed">Which documents are supposed to be carried in an Interview?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-9" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  <b>#1. Carry A Copy Of Your Resume/CV</b>
+                  <br>The first and foremost thing you need to put on your interview checklist is your resume or curriculum vitae (otherwise called a CV). These days, in most job interviews, candidates send a soft copy via email to the recruiter. Yet is advisable to carry along a hard copy or two in your folder, apart from a soft copy in your phone or pen drive. Interviewers prefer to scan the resume of a candidate before they start asking questions. <br><br>
+
+                  <b>#2. Carry All Certificates, Identity Proofs, And Other Documents</b>
+                  <br>The second place on your interview checklist needs to be occupied by all your certificates. Your mark sheets from Xth, XIIth, graduation, and post-graduation as well as your degree certificates are a must! These are very important documents as they also double up as identity proofs and support the BGV (background verification) process. You should ideally carry photocopies along with the originals of all these, especially for the degree certificates. You can also carry along certificates of other achievements and to increase your possibilities of getting hired. You may keep copies of your government ID proofs and other identity cards like PAN and AADHAR CARD. Keep your bank account details handy as some employers hire candidates on the spot and begin their documentation on day 1. Don’t forget to keep a few passport size and stamp size photographs ready. File all of these neatly on the previous day to avoid last minute hustle."
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-10" class="collapsed">How long should a resume be?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-10" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  A good resume should be one to two pages long, depending on your level of experience.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-11" class="collapsed">What should not to be put on a resume?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-11" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                 <b>Things not to put on your resume</b><br>
+                  Make sure your resume doesn’t include any of these unnecessary or controversial elements to give yourself the best chance of being invited for an interview:<br>
+
+                  Too much information <br>
+                  A solid wall of text <br>
+                  Spelling mistakes and grammatical errors <br>
+                  Inaccuracies about your qualifications or experience <br>
+                  Unnecessary personal information <br>
+                  Your age <br>
+                  Negative comments about a former employer <br>
+                  Details about your hobbies and interests <br>
+                  Passive language <br>
+                  Tiny text <br>
+                  Miscellaneous extra content <br>
+                </p>
+              </div>
+            </li>
+
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-12" class="collapsed">What fields should be present in a resume?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-12" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  <b>What to put on a resume? Here are the key items to include:</b>
+                  <br>
+                  Contact Information <br>
+                  Opening Statement: Summary or Objective <br>
+                  Work History <br>
+                  Education <br>
+                  Soft Skills and Technical Skills <br>
+                  Certifications and Professional Memberships <br>
+                  Achievements and Awards <br>
+                  Additional Sections (Community Involvement, Volunteering, etc.)
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-13" class="collapsed">Under resume, what all should be included in contact information?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-13" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  At a minimum, your contact information section should include your name, phone number and email address. Depending on the type of job you’re applying for, you might also include a link to an online portfolio or professional website.
+                  <br><br>
+                  <b>An example contact information section might look like this: </b>
+                  <br>
+                  Alex Gardner<br>
+                  Houston, Texas • (123) ​456-7891 <br>
+                  agardner@email.com • agarder.portfolio.com<br>
+                  A common practice is to use your name as the title of the page, formatted so that employers can easily identify your name and contact information first.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-14" class="collapsed">Under resume, what all should be included in objective?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-14" class="collapse" data-bs-parent=".accordion-list">
+                <p>
+                  Your resume summary or objective should be a short, one to two sentence section that briefly explains who you are and why you’re qualified. Carefully review the job posting for clues on which of your technical and soft skills will be most important and relevant.
+                  <br>
+                  Resume summaries and objectives are slightly different, and you should choose to include one or both depending on your background and the position you’re seeking. A resume summary will describe your work experience, while a resume objective will state your short-term goals.<br>
+                  A summary is good if you have at least some work experience that can be quickly summarized. An objective statement, however, is better suited for those who have recently graduated from high school or college, or who otherwise have limited job experience.<br>
+                  <b>Your resume summary could say:</b><br>
+                  “Thoughtful construction laborer with over five years of experience helping manage teams toward successful and safe completion of housing projects.”
+                  <br>
+                  <b>Your resume objective could say:</b><br>
+                  “Recent graduate eagerly looking to expand construction labor experience with a growing contractor.”
+                  <br>
+                  In both your resume section and your summary, it’s important to avoid talking about topics more suited to a job interview, such as how much you’re hoping to earn.
+                </p>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>InterviewUp</h3>
+            <p>
+             St. Francis Institute of Technology<br>
+             Mount Poinsur, S.V.P. Road,<br> Borivali(West),
+             Mumbai - 400103<br><br>
+              <strong>Phone:</strong>022-28928585<br>
+              <strong>Email:</strong>sfedu@sfit.ac.in<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Features</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../faqs">FAQs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../overview">Overview</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Interview Insights</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Job Roles</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Job Companies</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Chatbot</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Follow us to get more such info!!</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+      <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static  'js/main.js' %}"></script>
+
+</body>
+</html>

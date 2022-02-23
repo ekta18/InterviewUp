@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+     <!-- Favicons -->
+  <link href="{% static 'img/logo.png' %}" rel="icon">
+  
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="{% static 'img/interview.svg' %}" />
+      </div>
+      <div class="login-container">
+        <form action="index.html">
+          <img class="avator" src="{% static 'img/resume.svg' %}" />
+          <h2 class="head">Login</h2>
+          <div class="input-div" one>
+            <div class="i">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h5>Email Id</h5>
+              <input class="input" type="text" />
+            </div>
+          </div>
+          <div class="input-div" two>
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div>
+              <h5>Password</h5>
+              <input class="input" type="password" />
+            </div>
+          </div>
+          <input type="submit" class="btn" value="Login" />
+          <a href="signup.html" class="signup">Don't have an account? Sign Up</a>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
