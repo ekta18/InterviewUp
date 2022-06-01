@@ -1,6 +1,6 @@
 # InterviewUp 💻
 <p align="left">
-    <img src="ss/banner_image.jpg" alt="BannerImage" height="350">
+    <img src="ss/banner_image.jpg" alt="BannerImage" width="650" height="350">
 </p>
 
 
