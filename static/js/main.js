@@ -9,6 +9,12 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunx);
 });
 
+$("#file-upload").css("opacity", "0");
+
+$("#file-browser").click(function(e) {
+  e.preventDefault();
+  $("#file-upload").trigger("click");
+});
 
 (function() {
   "use strict";

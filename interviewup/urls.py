@@ -18,5 +18,5 @@ from django.urls import path,include,re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("interview_helper.urls")),
+    path('', include("interviewup_app.urls")),
 ]

@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>News</title>
+
+	<!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo.png' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Concert+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}'" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+	  <!---CSS File -->
+  <link href="{% static 'css/faqs.css' %}" rel="stylesheet">
+
+</head>
+<body>
+	
+   <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a><a href="index.html">  InterviewUp</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+           <li><a class="nav-link scrollto" href="..">Home</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#features">Features</a></li> -->
+          <li><a class="nav-link scrollto" href="../faqs">FAQs</a></li>
+          <li><a class="nav-link scrollto active" href="../news">News</a></li>
+          <li><a class="nav-link scrollto" href="../videos">Experience Videos</a></li>
+          <li><a class="nav-link scrollto" href="../overview">Overview</a></li>
+          {%  if user.is_authenticated %}
+                 <li><a class="set" href="{% url 'logout' %}">Logout</a><li>
+                 <li><span class="nav-link scrollto">Hello, {{request.user}}</span></li>
+                {% else %}
+                <li><a class="nav-link scrollto" href="/login">Login</a></li>
+                <li><a class="nav-link scrollto" href="/register">Register</a></li>
+                {%  endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= News Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="last-modified">
+            <h2 style="text-align: right; font-size: 20px;"> <b>Last Modified : </b>4th May, 2022</h2>
+          </div>
+
+       <!--  <div class="section-title">
+          <h2>Latest News</h2>
+          <p>Get latest news about the top companies and keep yourself up - to - date with the latest information!!</p>
+        </div> -->
+
+        <div class="accordion-list">
+
+          {% block content %}
+    <div class="flex-box-row">
+
+        <h2 style="text-align:center; font-family: 'Raleway', sans-serif; color: #5777ba; font-weight: bold;">**Tech News**</h2><br>
+
+        <ul>
+            {% for items in technews %}
+            <li data-aos="fade-up">
+              <i class="bx bx-news icon-news"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">{{items.title}}<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <p class>
+                   {{items.description}}.
+                </p>
+                <div class = "newsdescription">
+                </div>
+                <button class="newsbutton">
+                    <a class = "text1" href="{{items.link}}">Read More</a>
+                </button>
+              </div>
+            </li>
+            {% endfor %}
+      </ul>
+
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <h2 style="text-align:center; font-family: 'Raleway', sans-serif; color: #5777ba; font-weight: bold;">**Startup News**</h2><br>
+
+      <ul>
+            {% for items in startupnews %}
+            <li data-aos="fade-up">
+              <i class="bx bx-news icon-news"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">{{items.title}}<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                <p class>
+                   {{items.description}}.
+                </p>
+                <div class = "newsdescription">
+                </div>
+                <button class="newsbutton">
+                    <a class = "text1" href="{{items.link}}">Read More</a>
+                </button>
+              </div>
+            </li>
+            {% endfor %}
+      </ul>
+    </div>
+    <br>
+    <hr>
+
+    {% endblock %}
+
+        </div>
+      </div>
+
+              <!-- <br>
+            <table class="table table-sm">
+                <tr>
+                    <th style="text-align: center;">Title</th>
+                    <th style="text-align: center;">Description</th>
+                    <th style="text-align: center;">Link</th>
+                </tr>
+               {% for items in technews %}
+                <tr>
+                    <td>{{items.title}} </td>
+                    <td>{{items.description}} </td>
+                    <td><a href="{{items.link}}" class="download-btn">Read More</a></td>
+                    </tr>
+                    
+                {% endfor %}
+            </table> -->
+
+    </section>
+    <!-- End News Section -->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>InterviewUp</h3>
+            <p>
+             St. Francis Institute of Technology<br>
+             Mount Poinsur, S.V.P. Road,<br> Borivali(West),
+             Mumbai - 400103<br><br>
+              <strong>Phone:</strong>022-28928585<br>
+              <strong>Email:</strong>sfedu@sfit.ac.in<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Features</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../faqs">FAQs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../overview">Overview</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Interview Insights</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Job Roles</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Job Companies</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">News</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Chatbot</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Follow us to get more such info!!</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+      <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static  'js/main.js' %}"></script>
+
+    <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"b926ec46be1a0e7ea7fa84b6a07e4881","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
+</body>
+</html>

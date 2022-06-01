@@ -47,10 +47,19 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="..">Home</a></li>
-          <li><a class="nav-link scrollto" href="#features">Features</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#features">Features</a></li> -->
           <li><a class="nav-link scrollto" href="../faqs">FAQs</a></li>
-          <li><a class="nav-link scrollto" href="..">News</a></li>
+          <li><a class="nav-link scrollto" href="../news">News</a></li>
+          <li><a class="nav-link scrollto" href="../videos">Experience Videos</a></li>
           <li><a class="nav-link scrollto" href="../overview">Overview</a></li>
+          {%  if user.is_authenticated %}
+                 <li><a class="set" href="{% url 'logout' %}">Logout</a><li>
+                 <li><span class="nav-link scrollto">Hello, {{request.user}}</span></li>
+                {% else %}
+                <li><a class="nav-link scrollto" href="/login">Login</a></li>
+                <li><a class="nav-link scrollto" href="/register">Register</a></li>
+                {%  endif %}
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -69,7 +78,7 @@
             <h1>Ace your interview <br> with us...</h1>
             <h2>Get potential interview questions, interview experience videos, <br> job roles and job companies here!!</h2>
 
-            <a href="#" class="download-btn"><i class="fas fa-running"></i></i>Get started</a>
+            <a href="/resume" class="download-btn"><i class="fas fa-running"></i></i>Get started</a>
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
@@ -349,6 +358,18 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
+
+  <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"b926ec46be1a0e7ea7fa84b6a07e4881","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
 
 </body>
 

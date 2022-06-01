@@ -18,30 +18,48 @@
         <img src="{% static 'img/interview.svg' %}" />
       </div>
       <div class="login-container">
-        <form action="index.html">
+        
+      <form method="POST" action="">
+        {% csrf_token %}
+
           <img class="avator" src="{% static 'img/resume.svg' %}" />
           <h2 class="head">Login</h2>
+
           <div class="input-div" one>
             <div class="i">
               <i class="fas fa-envelope"></i>
             </div>
             <div>
               <h5>Email Id</h5>
-              <input class="input" type="text" />
+              <input class="input" type="text" name="email" class="form-control"/>
             </div>
           </div>
+
           <div class="input-div" two>
             <div class="i">
               <i class="fas fa-lock"></i>
             </div>
             <div>
               <h5>Password</h5>
-              <input class="input" type="password" />
+              <input class="input" name="password" type="password" class="form-control"/>
             </div>
           </div>
+
           <input type="submit" class="btn" value="Login" />
-          <a href="signup.html" class="signup">Don't have an account? Sign Up</a>
+
+
+            {% if message %}
+              <font color="red">* {{message}}</font>
+              <br>
+              <br>
+            {% endif %} 
+
+            <div class="d-flex justify-content-center links">
+             <a href="{% url 'register' %}" class="ml-2 redirect">Don't have an account? Sign Up</a>
+            </div>
+
         </form>
+          
       </div>
     </div>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>

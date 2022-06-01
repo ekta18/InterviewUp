@@ -24,6 +24,7 @@ body {
 .img img {
   width: 500px;
 }
+
 .login-container {
   display: flex;
   align-items: center;
@@ -31,15 +32,38 @@ body {
 }
 
 .avator {
-  width: 150px;
+  width: 100px;
   height: 90px;
 }
 
 form {
-  width: 360px;
+  width: 500px;
+}
+/*
+.input-group-text {
+      background: #d9083c !important;
+      color: white !important;
+      border: 0 !important;
+      border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+      box-shadow: none !important;
+      outline: 0px !important;
 }
 
-form h2 {
+.errors{
+      color: #d9083c;
+    }*/
+
+.input-group-text {
+            background: #d9083c !important;
+      color: white !important;
+      border: 0 !important;
+      border-radius: 0.25rem 0 0 0.25rem !important;
+    }
+    
+h2 {
   font-size: 2.9rem;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -53,16 +77,16 @@ form h2 {
 .input-div {
   position: relative;
   display: grid;
-  grid-template-columns: 7% 93%;
+  grid-template-columns: 35% 65%;
   margin: 25px 0;
   padding: 5px 0;
-  border-bottom: 2px solid #d9d9d9;
+  /*border-bottom: 2px solid #d9d9d9;*/
 }
 .input-div:after,
 .input-div::before {
   content: "";
   position: absolute;
-  bottom: -2px;
+  /*bottom: -2px;*/
   width: 0;
   height: 2px;
   background-color: #5557ec;
