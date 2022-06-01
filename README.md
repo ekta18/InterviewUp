@@ -1,6 +1,6 @@
-# InterviewUp
+# InterviewUp 💻
 <p align="left">
-    <img src="ss/banner_image.jpg" alt="BannerImage" width="600" height="350">
+    <img src="ss/banner_image.jpg" alt="BannerImage" height="350">
 </p>
 
 
@@ -74,10 +74,34 @@
         <td>
             <img src="ss/gallery-11.png" alt="Image" width="700" height="100">
         </td>
+        <td>
+            <img src="ss/gallery-12.png" alt="Image" width="700" height="100">
+        </td>
+        <td>
+            <img src="ss/gallery-13.png" alt="Image" width="700" height="100">
+        </td>
     </tr>
     <tr>
         <th>FAQ Page(b)</th>
         <th>Overview Page</th>
+        <th>Resume Input Page</th>
+        <th>Chatbot</th>
+    </tr>
+    <tr>
+        <td>
+            <img src="ss/gallery-14.png" alt="Image" width="700" height="100">
+        </td>
+        <td>
+            <img src="ss/gallery-15.png" alt="Image" width="700" height="100">
+        </td>
+        <td>
+            <img src="ss/gallery-16.png" alt="Image" width="700" height="100">
+        </td>
+    </tr>
+    <tr>
+        <th>Interview Experience Videos Page</th>
+        <th>Interview Questions Page</th>
+        <th>Job Roles and Job Companies Page</th>
     </tr>
 </table>
 
